@@ -1,0 +1,14 @@
+import { Component, Input } from '@angular/core';
+import { HomeProductCard } from '../home-product-card/home-product-card';
+import { NgForOf , CommonModule } from '@angular/common';
+
+@Component({
+  selector: 'app-product-slider',
+  imports: [HomeProductCard , CommonModule],
+  templateUrl: './product-slider.html',
+  styleUrl: './product-slider.scss'
+})
+export class ProductSlider {
+  @Input() title:any;
+  @Input() products:any;
+}
