@@ -1,0 +1,56 @@
+<div class="fixed top-0 z-50 right-0 left-0 bg-[#69f0ae] text-gray-800">
+    <div class="h-16 flex items-center justify-between px-5 lg:px-15">
+
+        <div class="flex items-center">
+           <div class="mr-5">
+                <img class="w-8" src = "https://cdn.dribbble.com/userupload/17039932/file/original-983633d1f6de58f5d871f174ff34f057.jpg?resize=400x0" alt = ""/>
+            </div>
+            <div class="">
+                <div class="flex space-x-4">
+                    <a routerLink="/" class="text-gray-800">
+                        Shopify
+                    </a>
+                <div>
+                    <button class = "open-button" (click) = "openNavbarContent('men')" matButton>Men</button>
+                </div>
+                <div>
+                    <button class = "open-button" (click) = "openNavbarContent('women')" matButton>Women</button>
+                </div>
+            </div>
+        </div> 
+        </div>
+
+        <div class="flex items-center">
+            <button
+                (click) = "navigateTo('cart')" 
+                matIconButton
+            >
+                <mat-icon>shopping_cart</mat-icon>
+            </button>
+            <button  *ngIf = "false" mat-raised-button type="" color="accent">
+                LOGIN
+            </button>
+            <div  class="realtive ml-3 flex items-center">
+                <div class="flex items-center space-x-5">
+                    <button class="h-5 w-5 " matButton [matMenuTriggerFor]="profileMenu">
+                        <img
+                        class="rounded-full" 
+                        src="data:image/png;base64,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" 
+                        alt=""/>
+                    </button>
+                    <mat-menu #profileMenu="matMenu">
+                        <button mat-menu-item>Orders</button>
+                        <button mat-menu-item>Profile</button>
+                        <button mat-menu-item>Logout</button>
+                    </mat-menu>
+                    <span class="font-bold text-lg">Srivardhan</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div *ngIf = "isNavbarContentOpen" class=" absolute right-0 left-0 modal-container">
+        <app-nav-content [selectedSection] = "currentSection"/>
+    </div>
+</div>
+
+
